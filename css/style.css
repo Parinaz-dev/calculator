@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* direction: rtl; */
+}
+
+.main-parent {
+    margin: auto;
+    max-width: 1366px;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.screen {
+    margin-bottom: 5px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen input {
+    width: 350px;
+    height: 40px;
+    direction: ltr;
+    border: 1px solid aqua;
+}
+
+
+.keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 50%; */
+}
+
+.numbers {
+    /* width: 40%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+/* .big-plus {
+    margin-left: 35px;
+} */
+.big-plus button {
+    margin: 10px;
+    width: 60px;
+    height: 90px;
+}
+
+.numbers .show-1, .show-2, .show-3 {
+    /* width: 60%; */
+    /* margin-left: 16%; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.button {
+    /* width: 10%; */
+    margin: 3px;
+}
+
+/* .show-2 button {
+     width: 10%;
+    margin: 3px;
+}
+.show-3 button {
+     width: 10%;
+    margin: 3px;
+} */
+
+
+/* .placeholder {
+    display: flex;
+    align-items: center;
+} */
+
+.equal-clear {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+.equal-clear input {
+margin-right: 5px;
+}
+.equal-clear button {
+    margin-left: 5px;
+}
