@@ -33,8 +33,9 @@
               <button class="divide">/</button>
             </div>
           </div>
-          <div class="plus">
+          <div class="plus-equal">
             <button>+</button>
+            <button>=</button>
           </div>
         </div>
 
@@ -47,15 +48,21 @@
 
     <script>
       const buttons = document.querySelectorAll(".button");
-      // const minus = document.querySelectorAll(".minus");
-      // const multiply = document.querySelectorAll(".multiply");
-      // const plus = document.querySelectorAll(".plus");
-      // const divide = document.querySelectorAll(".divide");
+      const multiply = document.querySelector(".multiply");
+      const plus = document.querySelector(".plus");
+      const divide = document.querySelector(".divide");
+      const minus = document.querySelectorAll(".minus");
       const pshow = document.querySelector(".screen input");
 
       buttons.forEach(function (button) {
         button.addEventListener("click", function () {
           pshow.value += button.textContent;
+        });
+      });
+
+      minus.forEach(function (minus) {
+        minus.addEventListener("click", function () {
+          pshow.value += "-";
         });
       });
     </script>

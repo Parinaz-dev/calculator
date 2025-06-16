@@ -94,3 +94,13 @@ margin-right: 5px;
 .equal-clear button {
     margin-left: 5px;
 }
+.plus-equal {
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.plus-equal :nth-child(1) {
+        width: 35px;
+    height: 60px;
+}
