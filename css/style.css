@@ -64,7 +64,10 @@ body {
     justify-content: flex-start;
 }
 
-.button {
+.show .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* width: 10%; */
     margin: 3px;
 }
@@ -112,8 +115,13 @@ body {
     height: 50px;
 }
 
-
 .plus-equal button:nth-child(2) {
     width: 20px;
     height: 20px;
+}
+
+.dis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
