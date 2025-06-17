@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ماشین حساب</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="main-parent">
-      <div class="parent">
-        <div class="screen">
-          <input type="text" placeholder="..." />
-        </div>
-        <div class="keys">
-          <div class="numbers">
-            <div class="show-1">
-              <button class="button">7</button>
-              <button class="button">8</button>
-              <button class="button">9</button>
-              <button class="button">-</button>
-            </div>
-            <div class="show-2">
-              <button class="button">4</button>
-              <button class="button">5</button>
-              <button class="button">6</button>
-              <button class="button">*</button>
-            </div>
-            <div class="show-3">
-              <button class="button">1</button>
-              <button class="button">2</button>
-              <button class="button">3</button>
-              <button class="button">/</button>
-            </div>
-          </div>
-          <div class="big-plus">
-            <button>+</button>
-          </div>
-        </div>
 
-        <div class="equal-clear">
-          <input type="text" />
-          <button>C</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ماشین حساب</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="main-parent">
+    <div class="parent">
+      <div class="screen">
+        <input type="text" placeholder="..." />
+      </div>
+      <div class="keys">
+        <div class="numbers">
+          <div class="show-1">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">-</button>
+          </div>
+          <div class="show-2">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">*</button>
+          </div>
+          <div class="show-3">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">/</button>
+          </div>
+        </div>
+        <div class="big-plus">
+          <button>+</button>
         </div>
       </div>
-    </div>
 
-    <script>
-      let colorbutton = document.getElementsByClassName("button");
-      button[0].style.backgroundColor = "red";
-    </script>
-  </body>
+      <div class="equal-clear">
+        <input type="text" />
+        <button>C</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let colorbutton = document.getElementsByClassName("button");
+    button[0].style.backgroundColor = "red";
+  </script>
+</body>
+
 </html>
