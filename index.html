@@ -12,35 +12,36 @@
   <div class="main-parent">
     <div class="parent">
       <div class="screen">
-        <input type="text" placeholder="..." />
+        <input type="text" placeholder="" />
       </div>
       <div class="keys">
         <div class="numbers">
-          <div class="show-1">
+          <div class="show">
             <button class="button">7</button>
             <button class="button">8</button>
             <button class="button">9</button>
-            <button class="button">-</button>
+            <button class="minus">-</button>
           </div>
-          <div class="show-2">
+          <div class="show">
             <button class="button">4</button>
             <button class="button">5</button>
             <button class="button">6</button>
-            <button class="button">*</button>
+            <button class="multiply">*</button>
           </div>
-          <div class="show-3">
+          <div class="show">
             <button class="button">1</button>
             <button class="button">2</button>
             <button class="button">3</button>
-            <button class="button">/</button>
+            <button class="divide">/</button>
           </div>
         </div>
-        <div class="big-plus">
+        <div class="plus-equal">
           <button>+</button>
+          <button>=</button>
         </div>
       </div>
 
-      <div class="equal-clear">
+      <div class="clear-all">
         <input type="text" />
         <button>C</button>
       </div>
@@ -48,9 +49,26 @@
   </div>
 
   <script>
-    let colorbutton = document.getElementsByClassName("button");
-    button[0].style.backgroundColor = "red";
+    const buttons = document.querySelectorAll(".button");
+    const multiply = document.querySelector(".multiply");
+    const plus = document.querySelector(".plus");
+    const divide = document.querySelector(".divide");
+    const minus = document.querySelectorAll(".minus");
+    const pshow = document.querySelector(".screen input");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        pshow.value += button.textContent;
+      });
+    });
+
+    minus.forEach(function (minus) {
+      minus.addEventListener("click", function () {
+        pshow.value += "-";
+      });
+    });
   </script>
 </body>
 
 </html>
+<!--pshow.value += button.textContent;-->
