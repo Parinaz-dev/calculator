@@ -31,12 +31,13 @@
               <button class="button">1</button>
               <button class="button">2</button>
               <button class="button">3</button>
-              <button class="divide dis">/</button>
+              <button class="button">0</button>
             </div>
           </div>
           <div class="plus-equal">
             <button id="plus" class="dis">+</button>
             <button id="equal" class="dis">=</button>
+            <button class="divide dis">/</button>
           </div>
         </div>
 
@@ -68,7 +69,7 @@
         });
       });
 
-      multiply.forEach((multiply) {
+      multiply.forEach(function (multiply) {
         multiply.addEventListener("click", function () {
           pshow.value += "*";
         });
