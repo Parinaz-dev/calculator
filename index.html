@@ -43,24 +43,36 @@
 
         <div class="clear-all">
           <input type="text" />
-          <button>C</button>
+          <button id="clear">C</button>
         </div>
       </div>
     </div>
 
     <script>
       const buttons = document.querySelectorAll(".button");
-      const multiply = document.querySelector(".multiply");
-      const plus = document.querySelector(".plus");
-      const divide = document.querySelector(".divide");
+      const multiply = document.querySelectorAll(".multiply");
+      const plus = document.getElementById("plus");
+      const divide = document.querySelectorAll(".divide");
       const minus = document.querySelectorAll(".minus");
       const pshow = document.querySelector(".screen input");
       const equal = document.getElementById("equal");
+      const clear = document.getElementById("clear");
+      const resultdisplay = document.querySelector(".clear-all input");
 
       buttons.forEach(function (button) {
         button.addEventListener("click", function () {
           pshow.value += button.textContent;
         });
+      });
+
+      // plus.forEach(function (plus) {
+      //   plus.addEventListener("click", function () {
+      //     pshow.value += "+";
+      //   });
+      // });
+
+      plus.addEventListener("click", function () {
+        pshow.value += "+";
       });
 
       minus.forEach(function (minus) {
@@ -75,20 +87,24 @@
         });
       });
 
-      plus.forEach(function (plus) {
-        plus.addEventListener("click", function () {
-          pshow.value += "+";
-        });
-      });
-
-      divid.forEach(function (divid) {
-        divid.addEventListener("click", function () {
+      divide.forEach(function (divide) {
+        divide.addEventListener("click", function () {
           pshow.value += "/";
         });
       });
 
       equal.addEventListener("click", function () {
-        pshow.value = eval(pshow.value);
+        try {
+          const result = eval(pshow.value);
+          resultdisplay.value = result;
+        } catch (error) {
+          resultdisplay.value = "خطا";
+        }
+      });
+
+      clear.addEventListener("click", function () {
+        pshow.value = "";
+        resultdisplay.value = "";
       });
     </script>
   </body>
