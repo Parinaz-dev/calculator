@@ -44,6 +44,7 @@
         <div class="clear-all">
           <input type="text" />
           <button id="clear">C</button>
+          <button id="history">H</button>
         </div>
       </div>
     </div>
@@ -52,12 +53,14 @@
       const buttons = document.querySelectorAll(".button");
       const multiply = document.querySelectorAll(".multiply");
       const plus = document.getElementById("plus");
+      const history = document.getElementById("history");
       const divide = document.querySelectorAll(".divide");
       const minus = document.querySelectorAll(".minus");
       const pshow = document.querySelector(".screen input");
       const equal = document.getElementById("equal");
       const clear = document.getElementById("clear");
       const resultdisplay = document.querySelector(".clear-all input");
+      const historylist = [];
 
       buttons.forEach(function (button) {
         button.addEventListener("click", function () {
@@ -95,8 +98,11 @@
 
       equal.addEventListener("click", function () {
         try {
+          const expression = pshow.value;
           const result = eval(pshow.value);
           resultdisplay.value = result;
+
+          historylist.push(`${expression} = ${result} `);
         } catch (error) {
           resultdisplay.value = "خطا";
         }
@@ -105,6 +111,14 @@
       clear.addEventListener("click", function () {
         pshow.value = "";
         resultdisplay.value = "";
+      });
+
+      history.addEventListener("click", function () {
+        if (historylist.length === 0) {
+          alert("تاریخچه ای نیست");
+        } else {
+          alert("تاریخچه : \n" + historylist.join("\n"));
+        }
       });
     </script>
   </body>
