@@ -125,3 +125,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.historypart {
+    width: 100px;
+    background-color: brown;
+    height: 200px;
+    margin-top: 10px;
+}

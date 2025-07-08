@@ -53,13 +53,13 @@
       const buttons = document.querySelectorAll(".button");
       const multiply = document.querySelectorAll(".multiply");
       const plus = document.getElementById("plus");
-      const history = document.getElementById("history");
       const divide = document.querySelectorAll(".divide");
       const minus = document.querySelectorAll(".minus");
       const pshow = document.querySelector(".screen input");
       const equal = document.getElementById("equal");
       const clear = document.getElementById("clear");
       const resultdisplay = document.querySelector(".clear-all input");
+      const history = document.getElementById("history");
       const historylist = [];
 
       buttons.forEach(function (button) {
@@ -99,10 +99,11 @@
       equal.addEventListener("click", function () {
         try {
           const expression = pshow.value;
-          const result = eval(pshow.value);
+          const result = eval(expression);
           resultdisplay.value = result;
 
-          historylist.push(`${expression} = ${result} `);
+          historylist.push(expression + " = " + result); //`${expression} = ${result} `
+          display.value = result;
         } catch (error) {
           resultdisplay.value = "خطا";
         }
@@ -115,11 +116,16 @@
 
       history.addEventListener("click", function () {
         if (historylist.length === 0) {
-          alert("تاریخچه ای نیست");
+          console.log("تاریخچه ای نیست");
         } else {
-          alert("تاریخچه : \n" + historylist.join("\n"));
+          console.log("تاریخچه : \n" + historylist.join("\n"));
         }
+        return history();
       });
+
+      function appendToDisplay(val) {
+        display.value += val;
+      }
     </script>
   </body>
 </html>
