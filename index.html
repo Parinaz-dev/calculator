@@ -46,6 +46,8 @@
           <button id="clear">C</button>
           <button id="history">H</button>
         </div>
+
+        <div id="historydisplay"></div>
       </div>
     </div>
 
@@ -107,7 +109,7 @@
           resultdisplay.value = result;
 
           historylist.push(expression + " = " + result); //`${expression} = ${result} `
-          display.value = result;
+          pshow.value = result;
         } catch (error) {
           resultdisplay.value = "خطا";
         }
@@ -124,7 +126,15 @@
         } else {
           console.log("تاریخچه : \n" + historylist.join("\n"));
         }
-        return history();
+      });
+
+      history.addEventListener("click", function () {
+        const historydisplay = document.getElementById("historydisplay");
+        if (historydisplay.length === 0) {
+          historydisplay.textContent = "نیس";
+        } else {
+          historydisplay.innerHTML = historylist.join("<br>");
+        }
       });
 
       // --pshow.value += button.textContent;

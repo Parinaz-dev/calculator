@@ -126,9 +126,7 @@ body {
     justify-content: center;
 }
 
-.historypart {
-    width: 100px;
-    background-color: brown;
-    height: 200px;
-    margin-top: 10px;
+#historydisplay {
+    margin-top: 20px;
+    border: 1px green solid; 
 }
