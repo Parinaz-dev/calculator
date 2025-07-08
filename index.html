@@ -62,6 +62,10 @@
       const history = document.getElementById("history");
       const historylist = [];
 
+      function appendToDisplay(val) {
+        display.value += val;
+      }
+
       buttons.forEach(function (button) {
         button.addEventListener("click", function () {
           pshow.value += button.textContent;
@@ -123,10 +127,7 @@
         return history();
       });
 
-      function appendToDisplay(val) {
-        display.value += val;
-      }
+      // --pshow.value += button.textContent;
     </script>
   </body>
 </html>
-<!--pshow.value += button.textContent;-->
